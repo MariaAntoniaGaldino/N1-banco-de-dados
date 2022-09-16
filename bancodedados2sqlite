@@ -1,0 +1,6 @@
+select cliente.id,cliente.nome,produto.descricao
+from cliente
+join venda on (venda.id_cliente=cliente.id)
+join intem_venda on(intem_venda.id_venda = venda.id)
+join produto on(produto."id " = intem_venda.id_produto)
+where cliente.id=1
